@@ -1,11 +1,24 @@
 module.exports = {
-  extends: ['universe/native', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: ['expo', 'universe/native', 'plugin:@typescript-eslint/recommended', 'prettier'],
   plugins: ['@typescript-eslint', 'react-native', 'prettier', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
   rules: {
+    'import/order': 'off',
     'prettier/prettier': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'prefer-const': 'error',
+    'camelcase': 'error',
     'react-native/no-inline-styles': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    'spaced-comment': [
+      2,
+      'always',
+      {
+        'markers': ['/'],
+      },
+    ],
+    'quotes': ['error', 'single'],
+    'no-duplicate-imports': 'error',
     'simple-import-sort/imports': [
       'error',
       {
