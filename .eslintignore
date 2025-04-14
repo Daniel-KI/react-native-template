@@ -1,0 +1,7 @@
+
+Copy
+node_modules/
+.expo/
+dist/
+web-build/
+*.config.js
