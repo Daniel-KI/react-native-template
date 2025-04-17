@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "react-native-template",
     "name": "react-native-template",
     "slug": "react-native-template",
     "version": "1.0.0",

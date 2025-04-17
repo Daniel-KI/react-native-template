@@ -1,8 +1,6 @@
 import '@/shared/global.css';
-
 import { Theme, ThemeProvider, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
 import { Platform } from 'react-native';
 
@@ -47,8 +45,17 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
-      <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
-      <Stack />
+      <Stack
+        initialRouteName='index'
+        screenOptions={{
+          headerShown: false,
+          animation: 'fade',
+        }}
+      >
+        <Stack.Screen name='index' />
+        <Stack.Screen name='onboarding' />
+        <Stack.Screen name='home' />
+      </Stack>
     </ThemeProvider>
   );
 }
